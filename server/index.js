@@ -33,6 +33,10 @@ mongoose.connect(process.env.MONGO_URL, {
   console.error('Database connection error:', err);
 });
 
+app.get('/',(req,res)=>{
+  console.log('Site is working ');
+})
+
 // Webhook route
 app.post('/api/webhook', async (req, res) => {
   const data = req.body;
