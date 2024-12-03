@@ -15,9 +15,9 @@ function Login() {
     try {
       await login(email, password); // Call the login function from AuthContext
       console.log("Login successful, redirecting to home...");
-      setEmail(''); // Clear form fields
-      setPassword('');
-      navigate('/'); // Redirect to home or any other page
+      // setEmail(''); // Clear form fields
+      // setPassword('');
+      // navigate('/'); // Redirect to home or any other page
     } catch (error) {
       console.error('Login error:', error);
       setError('Invalid email or password. Please try again.'); // Show error message to user
