@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/Admin.css';
 
-const BASE_URL = 'http://localhost:5000';
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = "https://bookalogy.onrender.com"
 
 const AdminPage = () => {
   const [title, setTitle] = useState('');

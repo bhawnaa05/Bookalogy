@@ -12,10 +12,13 @@ function Signup() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://bookalogy.onrender.com';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', { // Ensure this URL is correct
+      const response = await fetch(`${BASE_URL}/api/auth/register`, { // Ensure this URL is correct
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, phone }), // Include phone in the request body

@@ -6,7 +6,8 @@ import PayButton1 from '../components/PayButton1';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext1';
 
-const BASE_URL = 'http://localhost:5000';
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://bookalogy.onrender.com';
 
 const BookDetails = () => {
   const { id } = useParams();

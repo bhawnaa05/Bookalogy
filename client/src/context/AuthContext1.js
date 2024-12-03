@@ -9,12 +9,13 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://bookalogy.onrender.com';
   useEffect(() => {
     const fetchUser = async () => {
       if (token) {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/userdetails', {
+          const response = await fetch(`${BASE_URL}/api/auth/userdetails`, {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
@@ -41,7 +42,7 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +73,7 @@ export function AuthProvider({ children }) {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/update', {
+      const response = await fetch(`${BASE_URL}/api/auth/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

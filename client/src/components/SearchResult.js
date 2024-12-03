@@ -4,6 +4,9 @@ import axios from 'axios';
 import BookCard from '../components/BookCard'; // Import the BookCard component
 import '../css/SearchResult.css';
 
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://bookalogy.onrender.com';
+
 const SearchResult = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,7 +17,7 @@ const SearchResult = () => {
   useEffect(() => {
     const fetchBooksData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/books?query=${query}`);
+        const response = await axios.get(`${BASE_URL}/api/books?query=${query}`);
         setBooks(response.data);
         setLoading(false);
       } catch (error) {

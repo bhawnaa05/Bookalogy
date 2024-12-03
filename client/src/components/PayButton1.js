@@ -4,7 +4,8 @@ import axios from 'axios';
 import pay from '../Payments/pay1';
 import { useAuth } from '../context/AuthContext1'; // Import useAuth hook
 
-const BASE_URL = 'http://localhost:5000';
+// const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://bookalogy.onrender.com';
 
 const PayButton1 = ({ orderId, orderAmount, customerId, customerName, customerEmail, customerPhone }) => {
   const { token } = useAuth(); // Use getToken from AuthContext
