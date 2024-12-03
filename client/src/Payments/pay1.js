@@ -5,8 +5,10 @@ import cashfree from "./utils";
 const pay = (paymentSessionId) => {
   const checkoutOptions = {
     paymentSessionId,
-    returnUrl: "http://localhost:3000",
-    notifyUrl: "https://38af-110-235-232-141.ngrok-free.app/api/webhook"
+    // returnUrl: "http://localhost:3000",
+    returnUrl: "https://bookalogy-bhawna-bhandaris-projects.vercel.app",
+    // notifyUrl: "https://38af-110-235-232-141.ngrok-free.app/api/webhook"
+    notifyUrl: "https://bookalogy.onrender.com/api/webhook"
   };
 
   return cashfree.checkout(checkoutOptions)
