@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.navbar-custom {
+  background: transparent; /* Make the background semi-transparent */
+  position: absolute; /* Position it over the carousel */
+  width: 100%;
+  top: 0;
+  z-index: 10; /* Ensure navbar is on top */
+  font-family: 'Montserrat', sans-serif;
+  padding: 0rem 1rem;
+  box-shadow: none;
+}
+
+.carousel {
+  width: 100%;
+  height: 700px; /* Adjust height as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow if desired */
+  margin: 0;
+  z-index: 1; /* Ensure carousel is beneath the navbar */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Ensure container is positioned for absolute children */
+  
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-image {
+  height: 50px; /* Adjust the height as needed */
+  width: auto;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 15px;
+}
+
+.navbar-links li {
+  display: inline;
+  position: relative;
+}
+
+.navbar-links a, .navbar-links span {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.navbar-links a:hover, .navbar-links span:hover {
+  color: #007bff;
+}
+
+.navbar-button {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.navbar-button a:hover {
+  color: #007bff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dropdown is above carousel */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-search {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  margin-top: 7px;
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding-right: 2rem; /* Add space for the search icon */
+}
+
+.navbar-search input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.navbar-search button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+.navbar-profile-link {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-profile-avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+
+.navbar-profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10000; /* Ensure dropdown is above carousel */
+  margin-top: 8px;
+}
+
+.navbar-profile-dropdown.active {
+  display: block;
+}
+
+.profile-popup-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.profile-popup-content .profile-name {
+  font-weight: bold;
+}
+
+.profile-popup-content .profile-email {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.profile-popup-content .navbar-link {
+  display: block;
+  padding: 0.5rem 0;
+  color: #000000;
+  text-decoration: none;
+}
+
+.profile-popup-content .navbar-link:hover {
+  text-decoration: none;
+}

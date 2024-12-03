@@ -1,0 +1,86 @@
+/* src/css/Orders.css */
+.orders-page {
+  padding: 20px;
+  max-width: 100%;
+  margin: 60px ;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #7e7c7c;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-items {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.order-item-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.order-item-quantity {
+  font-size: 14px;
+  color: #999;
+}
+
+.order-total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-item img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 4px;
+}

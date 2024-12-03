@@ -1,0 +1,147 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Apply Poppins font to the entire body */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+}
+
+.carousel {
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for better visibility */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.carousel-caption {
+  position: absolute;
+  color: #fff;
+  opacity: 0; /* Initially hidden */
+  background: rgba(0, 0, 0, 0.5); /* Add background to the caption */
+  padding: 20px; /* Add padding to the caption */
+  text-align: left;
+  z-index: 1; /* Ensure caption is above the carousel */
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+}
+
+/* Animation for fading in the text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Styles for specific caption positions */
+.carousel-caption.left-center {
+  animation: fadeIn 2s forwards;
+  top: 20%;
+  left: 40px; /* Distance from the left */
+  right: 40%;
+  transform: translateY(-50%); /* Center vertically */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for larger text */
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption h3,
+.carousel-caption h4 {
+  margin: 0; /* Remove default margins */
+  animation: fadeIn 2.5s forwards;
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+}
+
+.carousel-caption h1 {
+  font-size: 3.5rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold text */
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 600; /* Semi-bold text */
+}
+
+.carousel-caption h3 {
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: 400; /* Regular text */
+}
+
+.carousel-caption h4 {
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: 300; /* Light text */
+}
+
+/* Ensure the indicators have proper colors */
+.carousel-indicators li {
+  background-color: #007bff; /* Change the indicator color */
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3; /* Change the active indicator color */
+}
+
+/* Styles for the card overlay */
+.card-overlay {
+  position: absolute;
+  top: 15%;
+  right: 10%; /* Adjust the right distance as needed */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: rgba(0, 0, 0, 10); /* Black background */
+  color: #fff; /* White text color */
+  padding: 40px;
+  border-radius: 0; /* Rounded corners */
+  width: 510px; /* Adjust width as needed */
+  height: 300px;
+  animation: fadeIn 0.5s forwards;
+  z-index: 2; /* Ensure the card is above the carousel */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+}
+
+.card-content h3 {
+  animation: fadeIn 1.5s forwards;
+  position: relative;
+  left: 25%;
+  top: 95%;
+  z-index: 3;
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+}
+
+.card-content img.card-image {
+  position: absolute;
+  animation: fadeIn 1s forwards;
+  bottom: 18%; /* Position at the bottom of the card */
+  right: 25%; /* Align to the right side */
+  width: 70%; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+}

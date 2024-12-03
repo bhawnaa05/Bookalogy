@@ -1,0 +1,56 @@
+.book-row {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  position: relative;
+}
+
+.book-row__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.book-row__list {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.book-row__list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers */
+}
+
+.book-row__content-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.book-row__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color:black;
+  font-size: 30px;
+  font: bold;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.book-row__button:hover {
+  color: #252323e1;
+}
+
+.book-row__button--left {
+  left: 90px; /* Adjust position as needed */
+}
+
+.book-row__button--right {
+  right: 90px; /* Adjust position as needed */
+}

@@ -1,0 +1,24 @@
+.book-card {
+  font-family: 'Montserrat', sans-serif !important;
+  border: 0px solid #ddd;
+  padding: 0; /* Removed padding */
+  width: 160px;
+  height: 240px;
+  text-align: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  /* transition: transform 0.2s ease-in-out; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.book-card:hover {
+  transform: scale(1.02); /* Scale card on hover */
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.16); /* Increase shadow on hover */
+}
+
+.book-image {
+  width: 160px;
+  height: 240px;
+  border-radius: 0px;
+  display: block; /* Ensure the image behaves as block level element */
+  /* transition: transform 0.2s ease-in-out; */
+}
