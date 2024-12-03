@@ -16,7 +16,7 @@ const app = express();
 // Middleware setup
 app.use(cors({
   // origin: 'http://localhost:3000', // Replace with your frontend URL
-  origin:'https://bookalogy-bhawna-bhandaris-projects.vercel.app/',
+  origin:'https://bookalogy-bhawna-bhandaris-projects.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
