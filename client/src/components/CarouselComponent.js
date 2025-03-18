@@ -10,7 +10,7 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tyndale.com%2Fsites%2Freadthearc%2Ftag%2Fchristian-novels%2F&psig=AOvVaw1Kx3w2UoakkxwFoeVnFZ3z&ust=1742374539542000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDiuZahk4wDFQAAAAAdAAAAABAE"
+            src="https://www.tyndale.com/sites/readthearc/wp-content/uploads/sites/12/2022/01/open-book-image-420x280.jpg"
             alt="BookAlogy slide"
           />
           <Carousel.Caption className="left-center">
