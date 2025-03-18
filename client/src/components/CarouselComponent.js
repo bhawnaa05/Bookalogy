@@ -10,7 +10,7 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://it-harvest.com/wp-content/uploads/2021/01/shutterstock_1019382493-scaled.jpg"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tyndale.com%2Fsites%2Freadthearc%2Ftag%2Fchristian-novels%2F&psig=AOvVaw1Kx3w2UoakkxwFoeVnFZ3z&ust=1742374539542000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDiuZahk4wDFQAAAAAdAAAAABAE"
             alt="BookAlogy slide"
           />
           <Carousel.Caption className="left-center">
