@@ -130,9 +130,9 @@ body {
 .card-content img.card-image {
   position: absolute;
   animation: fadeIn 1s forwards;
-  bottom: 18%; /* Position at the bottom of the card */
-  right: 25%; /* Align to the right side */
-  width: 70%; /* Adjust the size as needed */
+  bottom: 10%; /* Position at the bottom of the card */
+  right: 20%; /* Align to the right side */
+  width: 75%; /* Adjust the size as needed */
   height: auto; /* Maintain aspect ratio */
   z-index: 1;
 }

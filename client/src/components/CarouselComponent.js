@@ -26,7 +26,7 @@ const CarouselComponent = () => {
               <h3>Get your book</h3>
               <h3>at a very reasonable price.</h3>
               <img
-                src="https://www.teahub.io/photos/full/190-1905414_books-library-wallpaper-hd-wallpapers-for-pc-book.jpg"
+                src="https://www.computerworld.com/wp-content/uploads/2024/10/3574465-0-21363200-1729533128-books_shelves_libary_reading_learning_education_the_last_bookstore_los_angeles_united_states_by_jaredd_craig_cc0_via_unsplash_1200x800-100765106-orig.jpg?quality=50&strip=all"
                 alt="Books Library"
                 className="card-image"
               />

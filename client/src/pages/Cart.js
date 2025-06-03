@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCart } from '../context/CartContext';
+import PayButton1 from '../components/PayButton1'; // Ensure this is default exported
+import { useAuth } from '../context/AuthContext1'; // assuming you have an auth context
 import '../css/Cart.css';
 
 const Cart = () => {
   const { cart, fetchCart, removeFromCart, clearCart, loading, error } = useCart();
+  const { user } = useAuth(); // get user details
+  const [orderId, setOrderId] = useState('');
 
   useEffect(() => {
     const loadCart = async () => {
       await fetchCart();
+      setOrderId(`ORDER-${Date.now()}`); // generate a unique order ID
     };
 
     loadCart();
@@ -32,9 +37,9 @@ const Cart = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
-  if (!cart.length) {
-    return <p>Your cart is empty.</p>;
-  }
+  if (!cart.length) return <p>Your cart is empty.</p>;
+
+  const totalAmount = cart.reduce((total, { bookId, quantity }) => total + bookId.price * quantity, 0);
 
   return (
     <div className="cart-page">
@@ -55,13 +60,25 @@ const Cart = () => {
           </div>
         ))}
       </div>
+
       <div className="cart-summary">
         <span>Total:</span>
-        <span>₹{cart.reduce((total, { bookId, quantity }) => total + bookId.price * quantity, 0)}</span>
+        <span>₹{totalAmount}</span>
       </div>
+
       <div className="cart-buttons">
         <button className="empty" onClick={handleClearCart}>Clear Cart</button>
-        <button className="checkout">Proceed to Pay</button>
+
+        {user && (
+          <PayButton1
+            orderId={orderId}
+            orderAmount={totalAmount}
+            customerId={user._id}
+            customerName={user.name}
+            customerEmail={user.email}
+            customerPhone={user.phone}
+          />
+        )}
       </div>
     </div>
   );
